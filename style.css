@@ -1,0 +1,418 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at top left,#2563eb33,transparent 35%),
+    radial-gradient(circle at bottom right,#9333ea33,transparent 35%),
+    linear-gradient(135deg,#09111f,#0f172a,#111827);
+    position:relative;
+}
+
+.background-blur{
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    filter:blur(120px);
+    animation:float 8s ease-in-out infinite alternate;
+}
+
+.blur1{
+    background:#3b82f6;
+    top:-120px;
+    left:-80px;
+}
+
+.blur2{
+    background:#9333ea;
+    bottom:-120px;
+    right:-80px;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0) translateX(0);
+    }
+    to{
+        transform:translateY(40px) translateX(30px);
+    }
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.login-card{
+    width:100%;
+    max-width:430px;
+    padding:40px;
+    border-radius:28px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.55),
+    0 0 60px rgba(37,99,235,.08),
+    inset 0 1px 0 rgba(255,255,255,.18);
+    position:relative;
+    overflow:hidden;
+    color:white;
+    animation:fadeIn .7s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.logo{
+    width:75px;
+    height:75px;
+    margin:auto;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    color:white;
+    background:linear-gradient(135deg,#3b82f6,#9333ea);
+    box-shadow:0 0 35px rgba(59,130,246,.5);
+    animation:pulse 2.5s infinite;
+}
+
+h1{
+    margin-top:22px;
+    text-align:center;
+    font-size:30px;
+}
+
+.login-card p{
+    margin-top:8px;
+    text-align:center;
+    color:#cbd5e1;
+}
+
+form{
+    margin-top:35px;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
+    padding:16px;
+    border-radius:14px;
+    margin-bottom:18px;
+    transition:.35s ease;
+}
+
+.input-box:hover,
+.input-box:focus-within{
+    border-color:#60a5fa;
+    box-shadow:0 0 18px rgba(96,165,250,.25);
+    transform:translateY(-2px);
+}
+
+.input-box i{
+    font-size:20px;
+}
+
+.input-box input{
+    width:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:15px;
+}
+
+.input-box input::placeholder{
+    color:#cbd5e1;
+}
+
+.password-box span{
+    cursor:pointer;
+    font-size:20px;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.options label{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    color:#cbd5e1;
+}
+
+.options a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+.options a:hover{
+    text-decoration:underline;
+}
+
+#loginBtn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    transition:.35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+#loginBtn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(59,130,246,.45);
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:30px 0;
+    color:#94a3b8;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(255,255,255,.15);
+}
+
+.google-btn{
+    width:100%;
+    padding:15px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.06);
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.35s ease;
+}
+
+.google-btn:hover{
+    background:rgba(255,255,255,.12);
+    transform:translateY(-2px);
+}
+
+.signup{
+    margin-top:28px;
+}
+
+.signup a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+.signup a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:480px){
+
+.login-card{
+    padding:28px;
+}
+
+h1{
+    font-size:26px;
+}
+
+.options{
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-start;
+}
+
+}
+.login-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-60%;
+
+left:-40%;
+
+width:300px;
+
+height:300px;
+
+background:rgba(255,255,255,.05);
+
+transform:rotate(30deg);
+
+pointer-events:none;
+
+filter:blur(20px);
+
+}
+#loginBtn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:80%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.35),
+transparent
+);
+
+transition:.8s;
+
+}
+
+#loginBtn:hover::before{
+
+left:150%;
+
+}
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:0 0 35px rgba(59,130,246,.45);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+box-shadow:0 0 55px rgba(59,130,246,.8);
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:0 0 35px rgba(59,130,246,.45);
+
+}
+
+}
+/* Toast Notification */
+
+.toast{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:320px;
+
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+
+    padding:18px;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    color:white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    transform:translateX(420px);
+
+    opacity:0;
+
+    transition:.4s ease;
+
+    z-index:9999;
+}
+
+.toast.show{
+
+    transform:translateX(0);
+
+    opacity:1;
+
+}
+
+.toast i{
+
+    font-size:28px;
+
+}
+
+.toast-content h4{
+
+    margin-bottom:5px;
+
+    font-size:16px;
+
+}
+
+.toast-content p{
+
+    margin:0;
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    text-align:left;
+
+}
