@@ -22,8 +22,6 @@ A modern and responsive Login UI built using **HTML, CSS, and JavaScript** with 
 
 ## 📸 Preview
 
-## 📸 Preview
-
 ![Premium Login UI](assets/Screenshot.png)
 
 ## 🚀 Live Demo
