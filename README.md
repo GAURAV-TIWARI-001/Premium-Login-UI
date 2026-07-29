@@ -22,11 +22,13 @@ A modern and responsive Login UI built using **HTML, CSS, and JavaScript** with 
 
 ## 📸 Preview
 
-> *(Project screenshot will be added here.)*
+## 📸 Preview
+
+![Premium Login UI](assets/screenshot.png)
 
 ## 🚀 Live Demo
 
-Coming Soon...
+https://gaurav-tiwari-001.github.io/Premium-Login-UI/
 
 ## 👨‍💻 Author
 
